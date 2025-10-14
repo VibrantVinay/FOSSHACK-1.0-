@@ -14,8 +14,15 @@ SCOPE = [
     "https://www.googleapis.com/auth/drive"
 ]
 
-# Add your credentials file
-CREDS = ServiceAccountCredentials.from_json_keyfile_name('credentials.json', SCOPE)
+import os
+import json
+
+# Get the JSON string from the environment variable
+creds_json_str = os.environ.get('credentials')
+# Convert the JSON string to a dictionary
+creds_dict = json.loads(creds_json_str)
+# Authorize using the dictionary
+CREDS = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, SCOPE)
 
 # Authorize the client
 client = gspread.authorize(CREDS)
