@@ -4,16 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Successful</title>
+    <!-- Link to your existing CSS file -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link to Font Awesome for the checkmark icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Registration Successful!</h1>
-            <p>Thank you for registering for FOSSHACK v1.0. We've received your details.</p>
-            <a href="/" class="back-link">Register another participant</a>
-        </div>
+
+    <div class="page-wrapper">
+
+        <!-- Re-use the same header for consistency -->
+        <header class="main-header">
+            <h1>FOSSHACK v1.0</h1>
+            <h2>FOSS CLUB VJEC</h2>
+        </header>
+
+        <!-- Success Message Section -->
+        <section class="success-section">
+            <div class="success-container">
+                <i class="fas fa-check-circle success-icon"></i>
+                <h1>Registration Successful!</h1>
+                <p>Thank you for registering for FOSSHACK v1.0. We've received your details and are excited to see you there!</p>
+                <a href="/" class="back-link">Register Another Participant</a>
+            </div>
+        </section>
+
     </div>
 </body>
 </html>
