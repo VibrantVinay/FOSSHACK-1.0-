@@ -5,64 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FOSSHACK v1.0 Registration</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
+
+    <div class="page-wrapper">
+
+        <header class="main-header">
             <h1>FOSSHACK v1.0</h1>
-            <h2>FOSS CLUB VJEC - Registration</h2>
-        </div>
-        <form action="/submit" method="post" class="registration-form">
-            <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            <h2>FOSS CLUB VJEC</h2>
+            <p>Join us for an exciting hackathon celebrating Free and Open Source Software.
+            <br>Collaborate, innovate, and build amazing projects!</p>
+        </header>
+
+        <section class="features-section">
+            <div class="feature-card">
+                <i class="fas fa-code"></i>
+                <h3>Open Source Focus</h3>
+                <p>Build projects using FOSS technologies and contribute to the community.</p>
             </div>
-            <div class="form-group">
-                <label for="year">Current Year</label>
-                <select id="year" name="year" required>
-                    <option value="" disabled selected>Select your year</option>
-                    <option value="1">1st Year</option>
-                    <option value="2">2nd Year</option>
-                    <option value="3">3rd Year</option>
-                    <option value="4">4th Year</option>
-                </select>
+            <div class="feature-card">
+                <i class="fas fa-users"></i>
+                <h3>Team Collaboration</h3>
+                <p>Work together with fellow students to create innovative solutions.</p>
             </div>
-            <div class="form-group">
-                <label for="semester">Current Semester</label>
-                <select id="semester" name="semester" required>
-                    <option value="" disabled selected>Select your semester</option>
-                    <option value="S1">S1</option>
-                    <option value="S2">S2</option>
-                    <option value="S3">S3</option>
-                    <option value="S4">S4</option>
-                    <option value="S5">S5</option>
-                    <option value="S6">S6</option>
-                    <option value="S7">S7</option>
-                    <option value="S8">S8</option>
-                </select>
+            <div class="feature-card">
+                <i class="fas fa-trophy"></i>
+                <h3>Exciting Prizes</h3>
+                <p>Compete for amazing prizes and recognition for your work.</p>
             </div>
-            <div class="form-group">
-                <label for="department">Department</label>
-                <select id="department" name="department" required>
-                    <option value="" disabled selected>Select your department</option>
-                    <option value="CSE">Computer Science & Engineering</option>
-                    <option value="ECE">Electronics & Communication Engineering</option>
-                    <option value="EEE">Electrical & Electronics Engineering</option>
-                    <option value="ME">Mechanical Engineering</option>
-                    <option value="CE">Civil Engineering</option>
-                </select>
+        </section>
+
+        <section class="registration-section">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Register Now</h2>
+                    <p>Fill in your details to secure your spot at FOSSHACK v1.0</p>
+                </div>
+                <form action="/submit" method="post">
+                    <div class="form-group">
+                        <label for="name">Name of Student *</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="year">Current Year *</label>
+                            <select id="year" name="year" required>
+                                <option value="" disabled selected>Select year</option>
+                                <option value="1">1st Year</option>
+                                <option value="2">2nd Year</option>
+                                <option value="3">3rd Year</option>
+                                <option value="4">4th Year</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="semester">Semester *</label>
+                            <select id="semester" name="semester" required>
+                                <option value="" disabled selected>Select semester</option>
+                                <option value="S1">S1</option>
+                                <option value="S2">S2</option>
+                                <option value="S3">S3</option>
+                                <option value="S4">S4</option>
+                                <option value="S5">S5</option>
+                                <option value="S6">S6</option>
+                                <option value="S7">S7</option>
+                                <option value="S8">S8</option>
+                            </select>
+                        </div>
+                    </div>
+
+                     <div class="form-row">
+                        <div class="form-group">
+                            <label for="department">Department *</label>
+                             <select id="department" name="department" required>
+                                <option value="" disabled selected>e.g., Computer Science</option>
+                                <option value="CSE">Computer Science & Engineering</option>
+                                <option value="ECE">Electronics & Communication Engineering</option>
+                                <option value="EEE">Electrical & Electronics Engineering</option>
+                                <option value="ME">Mechanical Engineering</option>
+                                <option value="CE">Civil Engineering</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="section">Section *</label>
+                            <input type="text" id="section" name="section" placeholder="e.g., A" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your contact number" pattern="[0-9]{10}" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Complete Registration</button>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="section">Section</label>
-                <input type="text" id="section" name="section" placeholder="e.g., A, B" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter your 10-digit phone number" pattern="[0-9]{10}" required>
-            </div>
-            <button type="submit" class="submit-btn">Register Now</button>
-        </form>
+        </section>
+
     </div>
 </body>
 </html>
