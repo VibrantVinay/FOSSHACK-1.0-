@@ -166,7 +166,70 @@ body {
     margin-top: 10px;
 }
 
+/* --- Add these styles to the bottom of your existing style.css file --- */
+
+/* Success Page Specific Styles */
+.success-section {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: -50px; /* Pulls the card up over the header */
+    position: relative;
+    z-index: 10;
+}
+
+.success-container {
+    background-color: #ffffff;
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 91, 187, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 4em;
+    color: #28a745; /* Success Green */
+    margin-bottom: 20px;
+}
+
+.success-container h1 {
+    color: #333;
+    font-size: 2.2em;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+}
+
+.success-container p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin: 0 0 30px 0;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #005bbb, #007bff);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.back-link:hover {
+    background: linear-gradient(45deg, #004a99, #006fe6);
+    transform: translateY(-2px);
+}
+
+
 .submit-btn:hover {
     background: linear-gradient(45deg, #004a99, #006fe6);
     transform: translateY(-2px);
 }
+
