@@ -22,7 +22,7 @@ client = gspread.authorize(CREDS)
 
 # Find the spreadsheet by its name and open the first sheet
 # Make sure the name matches your Google Sheet's name exactly
-sheet = client.open("FOSSHACK Registrations").sheet1
+sheet = client.open("FOSSHACK v1.0 Registration Form").sheet1
 # -------------------------------
 
 @app.route('/')
