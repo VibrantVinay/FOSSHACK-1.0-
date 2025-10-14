@@ -1,0 +1,116 @@
+/* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8; /* Light blue-gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Main Container for the Form */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 91, 187, 0.15);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Header Section */
+.header {
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #005bbb; /* Professional Blue */
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.header h2 {
+    color: #555;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+/* Form Grouping */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Input and Select Fields */
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; /* Important for padding and width */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #005bbb;
+    box-shadow: 0 0 8px rgba(0, 91, 187, 0.2);
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #005bbb, #007bff);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(45deg, #004a99, #006fe6);
+    transform: translateY(-2px);
+}
+
+/* Success Page Specific Styles */
+.header p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 25px;
+    text-decoration: none;
+    color: #005bbb;
+    font-weight: 600;
+    border: 1px solid #005bbb;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #005bbb;
+    color: #ffffff;
+}
