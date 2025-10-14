@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOSSHACK v1.0 Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>FOSSHACK v1.0</h1>
+            <h2>FOSS CLUB VJEC - Registration</h2>
+        </div>
+        <form action="/submit" method="post" class="registration-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="year">Current Year</label>
+                <select id="year" name="year" required>
+                    <option value="" disabled selected>Select your year</option>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="semester">Current Semester</label>
+                <select id="semester" name="semester" required>
+                    <option value="" disabled selected>Select your semester</option>
+                    <option value="S1">S1</option>
+                    <option value="S2">S2</option>
+                    <option value="S3">S3</option>
+                    <option value="S4">S4</option>
+                    <option value="S5">S5</option>
+                    <option value="S6">S6</option>
+                    <option value="S7">S7</option>
+                    <option value="S8">S8</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="department">Department</label>
+                <select id="department" name="department" required>
+                    <option value="" disabled selected>Select your department</option>
+                    <option value="CSE">Computer Science & Engineering</option>
+                    <option value="ECE">Electronics & Communication Engineering</option>
+                    <option value="EEE">Electrical & Electronics Engineering</option>
+                    <option value="ME">Mechanical Engineering</option>
+                    <option value="CE">Civil Engineering</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="section">Section</label>
+                <input type="text" id="section" name="section" placeholder="e.g., A, B" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your 10-digit phone number" pattern="[0-9]{10}" required>
+            </div>
+            <button type="submit" class="submit-btn">Register Now</button>
+        </form>
+    </div>
+</body>
+</html>
