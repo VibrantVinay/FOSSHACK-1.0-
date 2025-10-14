@@ -18,7 +18,7 @@ import os
 import json
 
 # Get the JSON string from the environment variable
-creds_json_str = os.environ.get('credentials')
+creds_json_str = os.environ.get('GOOGLE_APPLICATION_CREDS_JSON')
 # Convert the JSON string to a dictionary
 creds_dict = json.loads(creds_json_str)
 # Authorize using the dictionary
