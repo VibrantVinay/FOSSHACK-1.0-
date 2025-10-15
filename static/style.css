@@ -1,5 +1,3 @@
-/* Paste this entire block into static/style.css */
-
 /* General Body Styles */
 body {
     font-family: 'Poppins', sans-serif;
@@ -166,9 +164,13 @@ body {
     margin-top: 10px;
 }
 
-/* --- Add these styles to the bottom of your existing style.css file --- */
+.submit-btn:hover {
+    background: linear-gradient(45deg, #004a99, #006fe6);
+    transform: translateY(-2px);
+}
 
-/* Success Page Specific Styles */
+
+/* 4. Success Page Specific Styles */
 .success-section {
     padding: 40px 20px;
     display: flex;
@@ -228,10 +230,6 @@ body {
 }
 
 
-.submit-btn:hover {
-    background: linear-gradient(45deg, #004a99, #006fe6);
-    transform: translateY(-2px);
-}
 
 
 
