@@ -1,48 +1,126 @@
 /* General Body Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f4f8; /* Light blue-gray background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    background-color: #f0f4f8;
+    margin: 0;
+    color: #333;
+}
+
+.page-wrapper {
+    width: 100%;
+}
+
+/* 1. Main Header (Blue Section) */
+.main-header {
+    background: linear-gradient(90deg, #005bbb, #007bff);
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.main-header h1 {
+    font-size: 3.5em;
+    font-weight: 700;
     margin: 0;
 }
 
-/* Main Container for the Form */
-.container {
+.main-header h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 10px 0 20px 0;
+    opacity: 0.9;
+}
+
+.main-header p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 2. Features Section */
+.features-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    margin-top: -50px; /* Pulls the cards up slightly over the header */
+    position: relative;
+    z-index: 10;
+}
+
+.feature-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 91, 187, 0.1);
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+}
+
+.feature-card i {
+    font-size: 2em;
+    color: #005bbb;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.feature-card p {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 3. Registration Form Section */
+.registration-section {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
     background-color: #ffffff;
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 91, 187, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 91, 187, 0.1);
     width: 100%;
-    max-width: 500px;
+    max-width: 800px;
     text-align: center;
 }
 
-/* Header Section */
-.header {
+.form-header {
     margin-bottom: 30px;
 }
 
-.header h1 {
-    color: #005bbb; /* Professional Blue */
-    font-size: 2.5em;
+.form-header h2 {
+    color: #005bbb;
+    font-size: 2em;
     font-weight: 600;
     margin: 0;
 }
 
-.header h2 {
+.form-header p {
     color: #555;
-    font-size: 1.2em;
-    font-weight: 400;
     margin-top: 5px;
 }
 
-/* Form Grouping */
+/* Form Styling */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
 .form-group {
     margin-bottom: 20px;
     text-align: left;
+    width: 100%; /* Makes groups in a row take up equal space */
 }
 
 .form-group label {
@@ -52,7 +130,6 @@ body {
     color: #333;
 }
 
-/* Input and Select Fields */
 .form-group input,
 .form-group select {
     width: 100%;
@@ -61,7 +138,7 @@ body {
     border-radius: 8px;
     font-size: 1em;
     font-family: 'Poppins', sans-serif;
-    box-sizing: border-box; /* Important for padding and width */
+    box-sizing: border-box;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
@@ -84,6 +161,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
+    margin-top: 10px;
 }
 
 .submit-btn:hover {
@@ -91,26 +169,62 @@ body {
     transform: translateY(-2px);
 }
 
-/* Success Page Specific Styles */
-.header p {
-    font-size: 1.1em;
+
+/* 4. Success Page Specific Styles */
+.success-section {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: -50px; /* Pulls the card up over the header */
+    position: relative;
+    z-index: 10;
+}
+
+.success-container {
+    background-color: #ffffff;
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 91, 187, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 4em;
+    color: #28a745; /* Success Green */
+    margin-bottom: 20px;
+}
+
+.success-container h1 {
     color: #333;
+    font-size: 2.2em;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+}
+
+.success-container p {
+    font-size: 1.1em;
+    color: #555;
     line-height: 1.6;
+    margin: 0 0 30px 0;
 }
 
 .back-link {
     display: inline-block;
-    margin-top: 25px;
-    text-decoration: none;
-    color: #005bbb;
-    font-weight: 600;
-    border: 1px solid #005bbb;
-    padding: 10px 20px;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #005bbb, #007bff);
+    color: #ffffff;
+    border: none;
     border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .back-link:hover {
-    background-color: #005bbb;
-    color: #ffffff;
+    background: linear-gradient(45deg, #004a99, #006fe6);
+    transform: translateY(-2px);
 }
