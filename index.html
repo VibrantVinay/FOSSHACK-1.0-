@@ -4,19 +4,206 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FOSSHACK v1.0 Registration</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            color: #333;
+        }
+
+        .page-wrapper {
+            width: 100%;
+        }
+
+        /* 1. Main Header (Blue Section) */
+        .main-header {
+            background: linear-gradient(90deg, #005bbb, #007bff);
+            color: #ffffff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .main-header h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .main-header h2 {
+            font-size: 1.5em;
+            font-weight: 400;
+            margin: 10px 0 20px 0;
+            opacity: 0.9;
+        }
+
+        .main-header p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 2. Features Section */
+        .features-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Added for responsiveness */
+            gap: 30px;
+            padding: 40px 20px;
+            margin-top: -50px; /* Pulls the cards up slightly over the header */
+            position: relative;
+            z-index: 10;
+        }
+
+        .feature-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 91, 187, 0.1);
+            width: 100%;
+            max-width: 300px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .feature-card i {
+            font-size: 2em;
+            color: #005bbb;
+            margin-bottom: 15px;
+            /* Styling for icon background */
+            background-color: #e6f0ff;
+            padding: 15px;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25em;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .feature-card p {
+            font-size: 0.95em;
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* 3. Registration Form Section */
+        .registration-section {
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 91, 187, 0.1);
+            width: 100%;
+            max-width: 700px; /* Adjusted width */
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-header h2 {
+            color: #333; /* Darker color for contrast */
+            font-size: 2em;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .form-header p {
+            color: #555;
+            margin-top: 5px;
+        }
+
+        /* Form Styling */
+        .form-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap; /* For responsiveness */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+            flex: 1; /* Makes groups in a row take up equal space */
+            min-width: 200px; /* Minimum width for responsiveness */
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #005bbb;
+            box-shadow: 0 0 8px rgba(0, 91, 187, 0.2);
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #005bbb, #007bff);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(45deg, #004a99, #006fe6);
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 <body>
-
     <div class="page-wrapper">
-
         <header class="main-header">
             <h1>FOSSHACK v1.0</h1>
             <h2>FOSS CLUB VJEC</h2>
-            <p>Join us for an exciting hackathon celebrating Free and Open Source Software.
-            <br>Collaborate, innovate, and build amazing projects!</p>
+            <p>Join us for an exciting hackathon celebrating Free and Open Source Software. Collaborate, innovate, and build amazing projects!</p>
         </header>
 
         <section class="features-section">
@@ -43,67 +230,76 @@
                     <h2>Register Now</h2>
                     <p>Fill in your details to secure your spot at FOSSHACK v1.0</p>
                 </div>
-                <form action="/submit" method="post">
+                
+                <form action="#">
                     <div class="form-group">
-                        <label for="name">Name of Student *</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        <label for="student-name">Name of Student *</label>
+                        <input type="text" id="student-name" name="student-name" placeholder="Enter your full name" required>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="year">Current Year *</label>
-                            <select id="year" name="year" required>
+                            <label for="current-year">Current Year *</label>
+                            <select id="current-year" name="current-year" required>
                                 <option value="" disabled selected>Select year</option>
-                                <option value="1">1st Year</option>
-                                <option value="2">2nd Year</option>
-                                <option value="3">3rd Year</option>
-                                <option value="4">4th Year</option>
+                                <option value="1">First Year</option>
+                                <option value="2">Second Year</option>
+                                <option value="3">Third Year</option>
+                                <option value="4">Fourth Year</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="semester">Semester *</label>
                             <select id="semester" name="semester" required>
                                 <option value="" disabled selected>Select semester</option>
-                                <option value="S1">S1</option>
-                                <option value="S2">S2</option>
-                                <option value="S3">S3</option>
-                                <option value="S4">S4</option>
-                                <option value="S5">S5</option>
-                                <option value="S6">S6</option>
-                                <option value="S7">S7</option>
-                                <option value="S8">S8</option>
+                                <option value="1">S1</option>
+                                <option value="2">S2</option>
+                                <option value="3">S3</option>
+                                <option value="4">S4</option>
+                                <option value="5">S5</option>
+                                <option value="6">S6</option>
+                                <option value="7">S7</option>
+                                <option value="8">S8</option>
                             </select>
                         </div>
                     </div>
 
-                     <div class="form-row">
+                    <div class="form-row">
                         <div class="form-group">
                             <label for="department">Department *</label>
-                             <select id="department" name="department" required>
-                                <option value="" disabled selected>e.g., Computer Science</option>
-                                <option value="CSE">Computer Science & Engineering</option>
-                                <option value="ECE">Electronics & Communication Engineering</option>
-                                <option value="EEE">Electrical & Electronics Engineering</option>
-                                <option value="ME">Mechanical Engineering</option>
-                                <option value="CE">Civil Engineering</option>
-                            </select>
+                            <select id="department" name="department" required>
+                            <option value="" disabled selected>Select Department</option>
+                                <option value="1">Computer Science and Engineering</option>
+                                <option value="2">Artificial Intelligence and Data Science</option>
+                                <option value="3">Computer Science and Business System</option>
+                                <option value="4">Computer Science and Design</option>
+                                <option value="5">Mechanical Engineering</option>
+                                <option value="6">Computer Science and Cyber Security</option>
+                                <option value="7">Civil Engineering</option>
+                                <option value="8">Electrical and Electronics Engineering</option>
+                                <option value="9">Electronics and Communication Engineering</option>
                         </div>
                         <div class="form-group">
                             <label for="section">Section *</label>
-                            <input type="text" id="section" name="section" placeholder="e.g., A" required>
+                            <select id="section" name="section" required>
+                            <option value="" disabled selected>Section</option>
+                            <option value="1">A</option>
+                            <option value="2">B</option>
+                            <option value="3">C</option>
+                            <option value="4">D</option>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Enter your contact number" pattern="[0-9]{10}" required>
+                        <label for="phone-number">Phone Number *</label>
+                        <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your contact number" required>
                     </div>
 
                     <button type="submit" class="submit-btn">Complete Registration</button>
                 </form>
             </div>
         </section>
-
     </div>
 </body>
 </html>
+
