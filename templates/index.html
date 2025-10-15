@@ -229,88 +229,81 @@
         </section>
 
         <!-- Registration Form Section -->
-        <section class="registration-section">
-            <div class="form-container">
-                <div class="form-header">
-                    <h2>Register Now</h2>
-                    <p>Fill in your details to secure your spot at FOSSHACK v1.0</p>
-                </div>
-                
-                <form action="#">
-                    <!-- Name (Full Width) -->
-                    <div class="form-group">
-                        <label for="student-name">Name of Student *</label>
-                        <input type="text" id="student-name" name="student-name" placeholder="Enter your full name" required>
-                    </div>
-
-                    <!-- Year and Semester (Side-by-side) -->
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="current-year">Current Year *</label>
-                            <select id="current-year" name="current-year" required>
-                                <option value="" disabled selected>Select year</option>
-                                <option value="1">First Year</option>
-                                <option value="2">Second Year</option>
-                                <option value="3">Third Year</option>
-                                <option value="4">Fourth Year</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="semester">Semester *</label>
-                            <select id="semester" name="semester" required>
-                                <option value="" disabled selected>Select semester</option>
-                                <option value="1">S1</option>
-                                <option value="2">S2</option>
-                                <option value="3">S3</option>
-                                <option value="4">S4</option>
-                                <option value="5">S5</option>
-                                <option value="6">S6</option>
-                                <option value="7">S7</option>
-                                <option value="8">S8</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Department and Section (Side-by-side with dropdowns) -->
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="department">Department *</label>
-                            <select id="department" name="department" required>
-                                <option value="" disabled selected>Select Department</option>
-                                <option value="1">Computer Science and Engineering</option>
-                                <option value="2">Artificial Intelligence and Data Science</option>
-                                <option value="3">Computer Science and Business System</option>
-                                <option value="4">Computer Science and Design</option>
-                                <option value="5">Mechanical Engineering</option>
-                                <option value="6">Computer Science and Cyber Security</option>
-                                <option value="7">Civil Engineering</option>
-                                <option value="8">Electrical and Electronics Engineering</option>
-                                <option value="9">Electronics and Communication Engineering</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="section">Section *</label>
-                            <select id="section" name="section" required>
-                                <option value="" disabled selected>Select Section</option>
-                                <option value="A">A</option>
-                                <option value="B">B</option>
-                                <option value="C">C</option>
-                                <option value="D">D</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Phone Number (Full Width) -->
-                    <div class="form-group">
-                        <label for="phone-number">Phone Number *</label>
-                        <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your contact number" required>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <button type="submit" class="submit-btn">Complete Registration</button>
-                </form>
+    <section class="registration-section">
+      <div class="form-container">
+        <div class="form-header">
+            <h2>Register Now</h2>
+            <p>Fill in your details to secure your spot at FOSSHACK v1.0</p>
+        </div>
+        
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label for="student-name">Name of Student *</label>
+                <input type="text" id="student-name" name="name" placeholder="Enter your full name" required>
             </div>
-        </section>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="current-year">Current Year *</label>
+                    <select id="current-year" name="year" required>
+                        <option value="" disabled selected>Select year</option>
+                        <option value="1">First Year</option>
+                        <option value="2">Second Year</option>
+                        <option value="3">Third Year</option>
+                        <option value="4">Fourth Year</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="semester">Semester *</label>
+                    <select id="semester" name="semester" required>
+                        <option value="" disabled selected>Select semester</option>
+                        <option value="1">S1</option>
+                        <option value="2">S2</option>
+                        <option value="3">S3</option>
+                        <option value="4">S4</option>
+                        <option value="5">S5</option>
+                        <option value="6">S6</option>
+                        <option value="7">S7</option>
+                        <option value="8">S8</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="department">Department *</label>
+                    <select id="department" name="department" required>
+                        <option value="" disabled selected>Select Department</option>
+                        <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+                        <option value="Artificial Intelligence and Data Science">Artificial Intelligence and Data Science</option>
+                        <option value="Computer Science and Business System">Computer Science and Business System</option>
+                        <option value="Computer Science and Design">Computer Science and Design</option>
+                        <option value="Mechanical Engineering">Mechanical Engineering</option>
+                        <option value="Computer Science and Cyber Security">Computer Science and Cyber Security</option>
+                        <option value="Civil Engineering">Civil Engineering</option>
+                        <option value="Electrical and Electronics Engineering">Electrical and Electronics Engineering</option>
+                        <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="section">Section *</label>
+                    <select id="section" name="section" required>
+                        <option value="" disabled selected>Select Section</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone-number">Phone Number *</label>
+                <input type="tel" id="phone-number" name="phone" placeholder="Enter your contact number" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Complete Registration</button>
+        </form>
     </div>
-</body>
-</html>
+</section>
+              
